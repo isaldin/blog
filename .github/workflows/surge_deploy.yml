@@ -13,7 +13,7 @@ jobs:
       - name: Install surge and fire deployment
         uses: actions/setup-node@v1
         with:
-          node-version: 13
+          node-version: 11
       - run: yarn install
       - run: yarn build
       - run: yarn surge ./public ${{ secrets.SURGE_SITE }} --token ${{ secrets.SURGE_SECRET }}
