@@ -3,7 +3,9 @@ import styled from '@emotion/styled';
 import { transparentize } from 'polished';
 import { Link, StaticQuery, graphql } from 'gatsby';
 
-import { heights, dimensions, colors } from '../styles/variables';
+import { heights, dimensions, colors, breakpoints } from '../styles/variables';
+import { getEmSize } from '../styles/mixins';
+
 import Container from './Container';
 
 const StyledHeader = styled.header`
@@ -11,6 +13,11 @@ const StyledHeader = styled.header`
   padding: 0 ${dimensions.containerPadding}rem;
   background-color: ${colors.brand};
   color: ${transparentize(0.5, colors.white)};
+
+  @media (max-width: ${getEmSize(breakpoints.md - 1)}em) {
+    justify-content: center;
+    display: flex;
+  }
 `;
 
 const HeaderInner = styled(Container)`
@@ -28,6 +35,10 @@ const HomepageLink = styled(Link)`
   &:hover,
   &:focus {
     text-decoration: none;
+  }
+
+  @media (max-width: ${getEmSize(breakpoints.md - 1)}em) {
+    display: none;
   }
 `;
 
