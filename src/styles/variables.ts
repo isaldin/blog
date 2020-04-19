@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 
 export const colors = {
-  brand: '#663399',
+  brand: '#35363a',
   lilac: '#9d7cbf',
   accent: '#ffb238',
   success: '#37b635',
@@ -17,8 +17,8 @@ export const colors = {
     copy: 'hsla(270, 15.797828016000002%, 0%, 0.88)',
     calm: 'rgba(0, 0, 0, 0.54)'
   },
-  white: '#fff',
-  black: '#000'
+  white: '#F5F7FA',
+  black: '#28313B'
 };
 
 export const fonts = {
@@ -61,5 +61,6 @@ export const dimensions = {
 };
 
 export const heights = {
-  header: 60
+  header: 60,
+  footer: 60
 };
