@@ -7,7 +7,13 @@ const StyledLayoutMain = styled.main`
   display: flex;
   flex-direction: column;
   flex: 1;
-  min-height: calc(${window.innerHeight} - ${heights.footer + heights.header}px);
+  min-height: calc(
+    (
+        ${typeof window !== 'undefined' ? window.innerHeight : '100vh'} -
+          ${heights.footer + heights.header}
+      )
+      px
+  );
 `;
 
 interface LayoutMainProps {
