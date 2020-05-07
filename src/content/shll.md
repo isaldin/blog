@@ -10,4 +10,5 @@
 
 #### ubuntu server: create user
 `adduser username`
+
 `usermod -aG sudo username`
