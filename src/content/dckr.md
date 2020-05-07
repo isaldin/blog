@@ -19,3 +19,6 @@
 
 ##### run shell on running container
 `docker exec -it container-id sh`
+
+##### serve current forlder with nginx
+`docker run -d --rm -v $PWD:/usr/share/nginx/html -p8080:80 nginx`
