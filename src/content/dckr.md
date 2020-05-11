@@ -6,7 +6,7 @@
 `docker rmi $(docker images -f dangling=true -q --no-trunc) -f`
 
 ##### attach to running container
-`docker container attach <container-id>`
+`docker exec -it a5838f34a606 /bin/bash`
 
 ##### login to docker hub
 `docker login --username=username`
